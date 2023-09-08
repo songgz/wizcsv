@@ -2,11 +2,13 @@
   Wizcsv是一个用ruby实现的简单高效的csv解析器，具备一定的容错能力。
 
 # 使用说明：
-1. 导入Wizcsv类：首先，您需要导入WizCsv类，可以通过以下方式进行导入：   
+1. 安装导入Wizcsv：
+   gem install wizcsv
+
    require 'wizcsv'
    
 
-2. 使用列子：   
+2. 如何使用：   
    
    options为以下选项：
 
@@ -21,5 +23,5 @@
    Wizcsv.parse(options) do |rows, csv|
      p rows
    end
-   在块中，您可以处理每一行的数据。 rows 参数是一个数组，包含解析后的行数据。 csv 参数是实例对像。
+   在块中，您可以处理每一行的数据。 rows 参数是一个行数组，包含解析后的行数据。 csv 参数是实例对像。
 
