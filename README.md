@@ -1,39 +1,25 @@
 # Wizcsv
+  Wizcsv是一个用ruby实现的简单高效的csv解析器，具备一定的容错能力。
 
-TODO: Delete this and the text below, and describe your gem
+# 使用说明：
+1. 导入Wizcsv类：首先，您需要导入WizCsv类，可以通过以下方式进行导入：   
+   require 'wizcsv'
+   
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/wizcsv`. To experiment with that code, run `bin/console` for an interactive prompt.
+2. 使用列子：   
+   
+   options为以下选项：
 
-## Installation
+    -  file_path ：CSV文件的路径（必需）。
+    -  col_sep ：列分隔符，默认为逗号。
+    -  row_sep ：行分隔符，默认为换行符。
+    -  quote_char ：引号字符，默认为双引号。
+    -  comment ：注释字符，默认为井号。
+    -  chunk_size ：块大小，默认为500。
+    -  file_encoding ：文件编码，默认为UTF-8。
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+   Wizcsv.parse(options) do |rows, csv|
+     p rows
+   end
+   在块中，您可以处理每一行的数据。 rows 参数是一个数组，包含解析后的行数据。 csv 参数是实例对像。
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/wizcsv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/wizcsv/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Wizcsv project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/wizcsv/blob/master/CODE_OF_CONDUCT.md).
