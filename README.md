@@ -1,11 +1,12 @@
 Wizcsv is a simple and efficient csv parser implemented in ruby, with certain fault tolerance.
 
-#Instructions for use:
+# Instructions for use:
+
 Install and import Wizcsv: gem install wizcsv
 
 require 'wizcsv'
 
-#how to use:
+# how to use:
 
 options are the following options:
 
